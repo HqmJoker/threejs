@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HqmJoker/threejs/issues"
   },
-  "homepage": "https://github.com/HqmJoker/threejs#readme"
+  "homepage": "https://github.com/HqmJoker/threejs#readme",
+  "dependencies": {
+    "dat.gui": "^0.7.9"
+  }
 }
