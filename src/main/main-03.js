@@ -17,20 +17,14 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 // 修改物体位置
 // cube.position.set(5, 0, 0);
-// cube.position.x = 3;
-// 缩放
-// cube.scale.set(3, 2, 1);
-// cube.scale.x = 5;
-// 旋转
-cube.rotation.set(Math.PI/4, 0, 0);
-
+cube.position.x = 3;
 scene.add(cube);
-
 //初始化渲染器
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight); // 设置渲染的尺寸，大小
 // 将webgl渲染的canvas内容添加到body
 document.body.appendChild(renderer.domElement);
+
 renderer.render(scene, camera); // 使用渲染器，通过相机将场景渲染出来
 
 // 添加轨道控制器
@@ -43,7 +37,6 @@ scene.add(axesHelper);
 // 渲染函数
 const render = () => {
   cube.position.x += 0.01;
-  cube.rotation.x += 0.01;
   if(cube.position.x > 5) {
     cube.position.x = 0;
   }
