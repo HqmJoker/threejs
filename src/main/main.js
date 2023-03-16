@@ -27,6 +27,10 @@ renderer.render(scene, camera); // 使用渲染器，通过相机将场景渲染
 // 添加轨道控制器
 const controls = new OrbitControls(camera, renderer.domElement);
 
+// 添加坐标轴辅助器
+const axesHelper = new THREE.AxesHelper(5);
+scene.add(axesHelper);
+
 // 渲染函数
 const render = () => {
   renderer.render(scene, camera);
