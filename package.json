@@ -4,7 +4,8 @@
   "description": "threejs学习练习",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "dependencies": {
     "dat.gui": "^0.7.9",
     "parcel": "^2.8.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
