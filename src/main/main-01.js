@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // 创建场景
 const scene = new THREE.Scene();
@@ -22,15 +21,4 @@ renderer.setSize(window.innerWidth, window.innerHeight); // 设置渲染的尺�
 // 将webgl渲染的canvas内容添加到body
 document.body.appendChild(renderer.domElement);
 
-renderer.render(scene, camera); // 使用渲染器，通过相机将场景渲染出来
-
-// 添加轨道控制器
-const controls = new OrbitControls(camera, renderer.domElement);
-
-// 渲染函数
-const render = () => {
-  renderer.render(scene, camera);
-  requestAnimationFrame(render);
-}
-
-render();
+renderer.render(scene, camera);
