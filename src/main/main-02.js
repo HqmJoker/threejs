@@ -15,9 +15,6 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
 });
 
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-// 修改物体位置
-// cube.position.set(5, 0, 0);
-cube.position.x = 3;
 scene.add(cube);
 //初始化渲染器
 const renderer = new THREE.WebGLRenderer();
@@ -36,10 +33,6 @@ scene.add(axesHelper);
 
 // 渲染函数
 const render = () => {
-  cube.position.x += 0.01;
-  if(cube.position.x > 5) {
-    cube.position.x = 0;
-  }
   renderer.render(scene, camera);
   requestAnimationFrame(render);
 }
